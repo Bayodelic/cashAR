@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E66CF5852BE153B100550749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CF5842BE153B100550749 /* AppDelegate.swift */; };
-		E66CF5872BE153B100550749 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E66CF5862BE153B100550749 /* art.scnassets */; };
 		E66CF5892BE153B100550749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CF5882BE153B100550749 /* ViewController.swift */; };
 		E66CF58C2BE153B100550749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66CF58A2BE153B100550749 /* Main.storyboard */; };
 		E66CF58E2BE153B300550749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E66CF58D2BE153B300550749 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		E66CF5812BE153B100550749 /* AR_prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66CF5842BE153B100550749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E66CF5862BE153B100550749 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		E66CF5882BE153B100550749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E66CF58B2BE153B100550749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E66CF58D2BE153B300550749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				E66CF5842BE153B100550749 /* AppDelegate.swift */,
-				E66CF5862BE153B100550749 /* art.scnassets */,
 				E66CF5882BE153B100550749 /* ViewController.swift */,
 				E66CF58A2BE153B100550749 /* Main.storyboard */,
 				E66CF58D2BE153B300550749 /* Assets.xcassets */,
@@ -123,7 +120,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E66CF5872BE153B100550749 /* art.scnassets in Resources */,
 				E66CF5912BE153B300550749 /* LaunchScreen.storyboard in Resources */,
 				E66CF58E2BE153B300550749 /* Assets.xcassets in Resources */,
 				E66CF58C2BE153B100550749 /* Main.storyboard in Resources */,
@@ -300,6 +296,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +327,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
