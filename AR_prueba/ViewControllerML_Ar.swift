@@ -19,11 +19,16 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A serial queue
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's
         sceneView.delegate = self
+        
+        // Iniciar temporizador para llamar a handleTap cada 5 segundos
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.handleTap(gestureRecognize:)), userInfo: nil, repeats: true)
         
         // Create a new scene
         let scene = SCNScene()
@@ -50,6 +55,8 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         
         loopCoreMLUpdate()
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +77,9 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        // Detener el temporizador al salir de la vista
+        timer?.invalidate()
+        timer = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,6 +112,9 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     }
     
     @objc func handleTap () {
+        // Eliminar los nodos existentes antes de agregar uno nuevo
+        sceneView.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
+        
         // Hit test : Real world
         // Get Screen Centre
         let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY )
@@ -201,7 +214,7 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             objectName = objectName.components(separatedBy: ",")[0]
             self.latestPrediction = objectName
             
-            self.handleTap()
+//            self.handleTap()
         }
     }
     
