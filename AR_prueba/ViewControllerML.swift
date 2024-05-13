@@ -32,8 +32,6 @@ class ViewControllerML: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
         
-        
-//        VNImageRequestHandler(cgImage: <#T##CGImage#>, options: [:]).perform(<#T##requests: [VNRequest]##[VNRequest]#>)
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -47,8 +45,7 @@ class ViewControllerML: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
                 guard let results = finishedReq.results as? [VNRecognizedObjectObservation] else { return }
                 
                 guard let firstObservation = results.first else { return }
-                
-//                print(firstObservation.identifier, firstObservation.confidence)
+                        
                 for observation in results {
                     for label in observation.labels {
                         print("Detected object: \(label.identifier), Confidence: \(label.confidence)")
