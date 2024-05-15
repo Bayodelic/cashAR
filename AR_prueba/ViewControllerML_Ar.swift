@@ -123,6 +123,13 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     }
     
     
+    @IBAction func buttonExchange(_ sender: UIButton) {
+        total_ = totalMoney
+        
+        
+    }
+    
+    
     @objc func handleTap ( gestureRecognize: UITapGestureRecognizer ) {
         // Hit test : Real world
         // Get Screen Centre
