@@ -7,6 +7,7 @@
 
 import UIKit
 import ARKit
+import AVKit
 
 class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     
@@ -19,7 +20,17 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A serial queue
     
+    // Voice
+    var synthetizer = AVSpeechSynthesizer()
+    
     var timer: Timer?
+    
+    var totalMoney : Double = 0.0
+    
+    var speaker : Bool = true
+    
+    @IBOutlet weak var buttonSpeaker: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +103,26 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         }
     }
     
+    
+    @IBAction func buttonRestart(_ sender: UIButton) {
+        // Remove every node in the Scene (AR)
+        sceneView.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
+        totalMoney = 0.0
+    }
+    
+    
+    @IBAction func buttonSpeaker(_ sender: UIButton) {
+        
+        speaker.toggle()
+        
+        if speaker {
+            buttonSpeaker.setImage(UIImage(systemName: "volume.slash.fill"), for: .normal)
+        } else {
+            buttonSpeaker.setImage(UIImage(systemName: "volume.3.fill"), for: .normal)
+        }
+    }
+    
+    
     @objc func handleTap ( gestureRecognize: UITapGestureRecognizer ) {
         // Hit test : Real world
         // Get Screen Centre
@@ -108,6 +139,15 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             let node : SCNNode = createNewBubbleParentNode( latestPrediction )
             sceneView.scene.rootNode.addChildNode( node )
             node.position = worldCoord
+            
+            let numericValue = value(value: latestPrediction)
+            totalMoney += Double( numericValue )
+            
+            if speaker {
+                talkTotal()
+            }
+            
+            
         }
     }
     
@@ -233,6 +273,33 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         } catch {
             print(error)
         }
+    }
+    
+    func talkTotal ( ) {
+        
+        let utterance = AVSpeechUtterance(string: "\( totalMoney ) pesos")
+        utterance.rate = 0.50
+        utterance.volume = 1
+        utterance.voice = AVSpeechSynthesisVoice(language: "es_MX")
+        synthetizer.speak(utterance)
+        
+    }
+    
+    func value ( value: String ) -> Int {
+        
+        let pattern = "^(\\d+)_pesos?_MXN$"
+           
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        
+        // Search for coincidences
+        if let match = regex?.firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) {
+            if let range = Range(match.range(at: 1), in: value) {
+                let numberString = String(value[range])
+                return Int(numberString) ?? 0
+            }
+        }
+        
+        return 0
     }
 }
 

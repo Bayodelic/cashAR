@@ -65,20 +65,48 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zav-7p-WWy">
+                                <rect key="frame" x="253" y="758" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="arrow.clockwise" catalog="system" title="Restart"/>
+                                <connections>
+                                    <action selector="buttonRestart:" destination="GfL-Ez-qVZ" eventType="touchUpInside" id="SCw-6U-zWU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-gW-bMK">
+                                <rect key="frame" x="251" y="59" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="volume.slash.fill" catalog="system" title="Speech"/>
+                                <connections>
+                                    <action selector="buttonSpeaker:" destination="GfL-Ez-qVZ" eventType="touchUpInside" id="b7P-6S-iqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4Z-0C-93a">
+                                <rect key="frame" x="251" y="118" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="repeat" catalog="system" title="Exchange"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VV4-cP-4GG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="buttonSpeaker" destination="hAn-gW-bMK" id="TOO-SC-RDx"/>
                         <outlet property="sceneView" destination="O9c-65-Evz" id="XbL-OY-wHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfE-R4-Jld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987" y="4"/>
+            <point key="canvasLocation" x="1985.4961832061067" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="volume.slash.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
