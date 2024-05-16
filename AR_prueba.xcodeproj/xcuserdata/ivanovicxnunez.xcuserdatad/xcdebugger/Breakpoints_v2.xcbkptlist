@@ -14,8 +14,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "createNewBubbleParentNode(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "classificationCompleteHandler(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,10 +46,231 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "classificationCompleteHandler(request:error:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B04B67C-1B59-420A-8E51-CD13B9EA9DE4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AR_prueba/ViewControllerML_Ar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "buttonSpeaker(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8350C37B-918C-41C6-A29F-4F02D06232B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AR_prueba/ViewControllerML_Ar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "handleTap(gestureRecognize:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8350C37B-918C-41C6-A29F-4F02D06232B6 - ebcbeb7f50721c24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AR_prueba.ViewControllerML_Ar.handleTap(gestureRecognize: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ViewControllerML_Ar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "2824">
+               </Location>
+               <Location
+                  uuid = "8350C37B-918C-41C6-A29F-4F02D06232B6 - ebcbeb7f50721c24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AR_prueba.ViewControllerML_Ar.handleTap(gestureRecognize: __C.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ViewControllerML_Ar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "2816">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9559D29C-F7E1-4EF0-A1BF-EC9545D8356E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AR_prueba/ViewControllerML_Ar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
+            landmarkName = "value_int(value:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8978FD1B-71B2-4ECD-ACB9-021228BFF3AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AR_prueba/ExchangeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "exchange(toCurrency:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8978FD1B-71B2-4ECD-ACB9-021228BFF3AE - 292874d7782a4306"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "8978FD1B-71B2-4ECD-ACB9-021228BFF3AE - 292874d7782a4306"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AR_prueba/ExchangeController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "exchange(toCurrency:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E - de4c393982fcf9f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E - 292874d7782a3d36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1812">
+               </Location>
+               <Location
+                  uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E - e89a621d2956e20c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E - de4c393982fcf934"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "82B843D4-43C6-440D-BF5D-0404CC3BD22E - db3fc0cd27d85b35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for AR_prueba.ExchangeController.exchange(toCurrency: Swift.String) async -&gt; ()"
+                  moduleName = "AR_prueba"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/GPS/cashAR_iOS/AR_prueba/AR_prueba/ExchangeController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

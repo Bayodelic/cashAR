@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E634F9692BF5730900F382A7 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F9682BF5730800F382A7 /* Singleton.swift */; };
 		E634F96B2BF573C500F382A7 /* ExchangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E634F96A2BF573C500F382A7 /* ExchangeController.swift */; };
+		E65877192BF5AB740085F25C /* CurrencyClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E65877182BF5AB740085F25C /* CurrencyClassification.mlmodel */; };
 		E66CF5852BE153B100550749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CF5842BE153B100550749 /* AppDelegate.swift */; };
 		E66CF5892BE153B100550749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66CF5882BE153B100550749 /* ViewController.swift */; };
 		E66CF58C2BE153B100550749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E66CF58A2BE153B100550749 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		E634F9682BF5730800F382A7 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		E634F96A2BF573C500F382A7 /* ExchangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeController.swift; sourceTree = "<group>"; };
+		E65877182BF5AB740085F25C /* CurrencyClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CurrencyClassification.mlmodel; sourceTree = "<group>"; };
 		E66CF5812BE153B100550749 /* AR_prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66CF5842BE153B100550749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E66CF5882BE153B100550749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				E634F96A2BF573C500F382A7 /* ExchangeController.swift */,
 				E66CF58D2BE153B300550749 /* Assets.xcassets */,
 				E66CF58F2BE153B300550749 /* LaunchScreen.storyboard */,
+				E65877182BF5AB740085F25C /* CurrencyClassification.mlmodel */,
 				E6DD26B22BE728F100E87974 /* Peso 1.mlmodel */,
 				E696DBA12BEA922300EBC897 /* Resnet50.mlmodel */,
 			);
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E66CF5892BE153B100550749 /* ViewController.swift in Sources */,
+				E65877192BF5AB740085F25C /* CurrencyClassification.mlmodel in Sources */,
 				E6DD26B32BE728F100E87974 /* Peso 1.mlmodel in Sources */,
 				E634F96B2BF573C500F382A7 /* ExchangeController.swift in Sources */,
 				E696DBA02BE9E40800EBC897 /* ViewControllerML.swift in Sources */,
@@ -317,6 +321,8 @@
 				DEVELOPMENT_TEAM = TNV8BGLF66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "cashAR necesita acceder al microfono para comunicar los valores de las divisas";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -348,6 +354,8 @@
 				DEVELOPMENT_TEAM = TNV8BGLF66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "cashAR necesita acceder al microfono para comunicar los valores de las divisas";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

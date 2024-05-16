@@ -7,7 +7,7 @@
 
 import UIKit
 import ARKit
-import AVKit
+import AVFoundation
 
 class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     
@@ -39,7 +39,8 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Iniciar temporizador para llamar a handleTap cada 5 segundos
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.handleTap(gestureRecognize:)), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.handleTap(gestureRecognize:)), userInfo: nil, repeats: true)
+        setupAudioSession()
         
         // Create a new scene
         let scene = SCNScene()
@@ -56,7 +57,7 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         view.addGestureRecognizer(tapGesture)
         
         // Set up Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: Resnet50().model) else {
+        guard let selectedModel = try? VNCoreMLModel(for: CurrencyClassification().model) else {
             fatalError("Couldn't load model") }
             
         // Set up Vision-CoreML Request
@@ -89,8 +90,8 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
         // Detener el temporizador al salir de la vista
-        timer?.invalidate()
-        timer = nil
+//        timer?.invalidate()
+//        timer = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -142,13 +143,15 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             let transform : matrix_float4x4 = closestResult.worldTransform
             let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
             
+            // Number
+            let numericValue = value_int (value: latestPrediction)
+            totalMoney = totalMoney + Double( numericValue )
+            
             // Create a 3D Text
-            let node : SCNNode = createNewBubbleParentNode( latestPrediction )
+            let node : SCNNode = createNewBubbleParentNode( String(numericValue) )
             sceneView.scene.rootNode.addChildNode( node )
             node.position = worldCoord
             
-            let numericValue = value(value: latestPrediction)
-            totalMoney += Double( numericValue )
             
             if speaker {
                 talkTotal()
@@ -158,27 +161,27 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         }
     }
     
-    @objc func handleTap () {
-        // Eliminar los nodos existentes antes de agregar uno nuevo
-        sceneView.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
-        
-        // Hit test : Real world
-        // Get Screen Centre
-        let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY )
-        
-        let arHitTestResults : [ARHitTestResult ] = sceneView.hitTest(screenCentre, types: [ .featurePoint ])
-        
-        if let closestResult = arHitTestResults.first {
-            // Get Coordinates of HitTest
-            let transform : matrix_float4x4 = closestResult.worldTransform
-            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
-            
-            // Create a 3D Text
-            let node : SCNNode = createNewBubbleParentNode( latestPrediction )
-            sceneView.scene.rootNode.addChildNode( node )
-            node.position = worldCoord
-        }
-    }
+//    @objc func handleTap () {
+//        // Eliminar los nodos existentes antes de agregar uno nuevo
+//        sceneView.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
+//        
+//        // Hit test : Real world
+//        // Get Screen Centre
+//        let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY )
+//        
+//        let arHitTestResults : [ARHitTestResult ] = sceneView.hitTest(screenCentre, types: [ .featurePoint ])
+//        
+//        if let closestResult = arHitTestResults.first {
+//            // Get Coordinates of HitTest
+//            let transform : matrix_float4x4 = closestResult.worldTransform
+//            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+//            
+//            // Create a 3D Text
+//            let node : SCNNode = createNewBubbleParentNode( latestPrediction )
+//            sceneView.scene.rootNode.addChildNode( node )
+//            node.position = worldCoord
+//        }
+//    }
     
     func createNewBubbleParentNode ( _ text : String ) -> SCNNode {
         
@@ -247,8 +250,8 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             // Print classifications
-            print(classifications)
-            print("--")
+//            print(classifications)
+//            print("--")
             
             // Display Debug Text on screen
             var debugText:String = ""
@@ -286,15 +289,15 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         
         let utterance = AVSpeechUtterance(string: "\( totalMoney ) pesos")
         utterance.rate = 0.50
-        utterance.volume = 1
+        utterance.volume = 0.9
         utterance.voice = AVSpeechSynthesisVoice(language: "es_MX")
         synthetizer.speak(utterance)
         
     }
     
-    func value ( value: String ) -> Int {
+    func value_int ( value: String ) -> Int {
         
-        let pattern = "^(\\d+)_pesos?_MXN$"
+        let pattern = #"(\d+)_pesos?_MXN"#
            
         let regex = try? NSRegularExpression(pattern: pattern, options: [])
         
@@ -302,11 +305,27 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         if let match = regex?.firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) {
             if let range = Range(match.range(at: 1), in: value) {
                 let numberString = String(value[range])
+                print( numberString )
                 return Int(numberString) ?? 0
             }
         }
         
         return 0
+    }
+    
+    func setupAudioSession() {
+        AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            if granted {
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.duckOthers, .interruptSpokenAudioAndMixWithOthers])
+                    try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                } catch {
+                    print("Error setting up audio session: \(error)")
+                }
+            } else {
+                print("Microphone permission not granted")
+            }
+        }
     }
 }
 
