@@ -24,7 +24,7 @@ class ExchangeController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTotal.text = String( total_ )
+        labelTotal.text = "\(String(format: "%.2f", total_)) \( currency_origin )"
         
         pickerViewDivisas.delegate = self
         pickerViewDivisas.dataSource = self
