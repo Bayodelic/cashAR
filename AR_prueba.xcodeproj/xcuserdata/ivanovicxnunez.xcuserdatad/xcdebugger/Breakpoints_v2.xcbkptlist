@@ -14,8 +14,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "createNewBubbleParentNode(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "classificationCompleteHandler(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "classificationCompleteHandler(request:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "buttonSpeaker(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "handleTap(gestureRecognize:)"
             landmarkType = "7">
             <Locations>
@@ -126,8 +126,8 @@
             filePath = "AR_prueba/ViewControllerML_Ar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "value_int(value:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "AR_prueba/ExchangeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "exchange(toCurrency:)"
             landmarkType = "7">
             <Locations>
@@ -190,8 +190,8 @@
             filePath = "AR_prueba/ExchangeController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "exchange(toCurrency:)"
             landmarkType = "7">
             <Locations>

@@ -32,35 +32,6 @@ class ExchangeController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     }
     
-    
-//    func exchange (toCurrency : String) async {
-//        
-//        let url = URL(string: "https://api.fastforex.io/convert")!
-//        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-//        let queryItems: [URLQueryItem] = [
-//          URLQueryItem(name: "api_key", value: "4f1460a289-d991886ba2-sdjupz"),
-//        ]
-//        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
-//
-//        var request = URLRequest(url: components.url!)
-//        request.httpMethod = "GET"
-//        request.timeoutInterval = 10
-//        request.allHTTPHeaderFields = ["accept": "application/json"]
-//        
-//        do {
-//            let (data, _) = try await URLSession.shared.data(for: request)
-//            print(String(decoding: data, as: UTF8.self))
-//        } catch {
-//            print("Error fetching exchange rate: \(error)")
-//        }
-//
-//        let (data, _) = try await URLSession.shared.data(for: request)
-//        print(String(decoding: data, as: UTF8.self))
-//
-//    }
-    
-    
-    
     func exchange(toCurrency: String) async {
         let url = URL(string: "https://api.fastforex.io/convert")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
@@ -124,59 +95,11 @@ class ExchangeController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        currency_detiny = String(currencies[row].prefix(3))
-//        print( currencies[row] )
-//        await exchange(toCurrency: currencies[row])
-        
+
         let toCurrency = currencies[row]
         print(toCurrency)
         Task {
             await exchange(toCurrency: toCurrency)
         }
     }
-    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) async {
-//        
-//        var toCurrency = currencies[row]
-//        print( toCurrency )
-//        
-//        let url = URL(string: "https://api.fastforex.io/convert")!
-//        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-//        let queryItems: [URLQueryItem] = [
-//            URLQueryItem(name: "api_key", value: API_KEY),
-//            URLQueryItem(name: "to", value: toCurrency) // Agrega la moneda de destino a los parámetros de consulta
-//        ]
-//        components.queryItems = queryItems
-//
-//        var request = URLRequest(url: components.url!)
-//        request.httpMethod = "GET"
-//        request.timeoutInterval = 10
-//        request.allHTTPHeaderFields = ["accept": "application/json"]
-//
-//        do {
-//            let (data, _) = try await URLSession.shared.data(for: request)
-//            
-//            // Decodificar el JSON
-//            let decoder = JSONDecoder()
-//            let exchangeResponse = try decoder.decode(ExchangeResponse.self, from: data)
-//            
-//            // Acceder a los atributos
-//            print("Base: \(exchangeResponse.base)")
-//            print("Amount: \(exchangeResponse.amount)")
-//            
-//            // Acceder al resultado para la moneda específica
-//            if let rate = exchangeResponse.result[toCurrency] {
-//                print("\(toCurrency): \(rate)")
-//                labelTotalExchanged.text = String( "\(total_)  \(currency_origin) = \(rate) \(currency_detiny)")
-//            } else {
-//                print("Rate for \(toCurrency) not found")
-//            }
-//            
-//            print("Milliseconds: \(exchangeResponse.ms)")
-//            
-//        } catch {
-//            print("Error fetching exchange rate: \(error)")
-//        }
-//    }
-
 }

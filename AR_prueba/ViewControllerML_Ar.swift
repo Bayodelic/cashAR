@@ -23,8 +23,6 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
     // Voice
     var synthetizer = AVSpeechSynthesizer()
     
-    var timer: Timer?
-    
     var totalMoney : Double = 0.0
     
     var speaker : Bool = true
@@ -38,8 +36,6 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         // Set the view's
         sceneView.delegate = self
         
-        // Iniciar temporizador para llamar a handleTap cada 5 segundos
-//        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.handleTap(gestureRecognize:)), userInfo: nil, repeats: true)
         setupAudioSession()
         
         // Create a new scene
@@ -89,9 +85,7 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
-        // Detener el temporizador al salir de la vista
-//        timer?.invalidate()
-//        timer = nil
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -152,36 +146,13 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode( node )
             node.position = worldCoord
             
-            
             if speaker {
-                talkTotal()
+                talkTotal( current: numericValue )
             }
             
             
         }
     }
-    
-//    @objc func handleTap () {
-//        // Eliminar los nodos existentes antes de agregar uno nuevo
-//        sceneView.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
-//        
-//        // Hit test : Real world
-//        // Get Screen Centre
-//        let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY )
-//        
-//        let arHitTestResults : [ARHitTestResult ] = sceneView.hitTest(screenCentre, types: [ .featurePoint ])
-//        
-//        if let closestResult = arHitTestResults.first {
-//            // Get Coordinates of HitTest
-//            let transform : matrix_float4x4 = closestResult.worldTransform
-//            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
-//            
-//            // Create a 3D Text
-//            let node : SCNNode = createNewBubbleParentNode( latestPrediction )
-//            sceneView.scene.rootNode.addChildNode( node )
-//            node.position = worldCoord
-//        }
-//    }
     
     func createNewBubbleParentNode ( _ text : String ) -> SCNNode {
         
@@ -249,14 +220,10 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             .joined( separator: "\n")
         
         DispatchQueue.main.async {
-            // Print classifications
-//            print(classifications)
-//            print("--")
             
             // Display Debug Text on screen
             var debugText:String = ""
             debugText += classifications
-//            self.debugTextView.text = debugText
             
             // Store the latest prediction
             var objectName:String = "…"
@@ -264,7 +231,6 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
             objectName = objectName.components(separatedBy: ",")[0]
             self.latestPrediction = objectName
             
-//            self.handleTap()
         }
     }
     
@@ -285,9 +251,9 @@ class ViewControllerML_Ar : UIViewController, ARSCNViewDelegate {
         }
     }
     
-    func talkTotal ( ) {
+    func talkTotal ( current: Int ) {
         
-        let utterance = AVSpeechUtterance(string: "\( totalMoney ) pesos")
+        let utterance = AVSpeechUtterance(string: "\( current ) pesos. El total es \(totalMoney)")
         utterance.rate = 0.50
         utterance.volume = 0.9
         utterance.voice = AVSpeechSynthesisVoice(language: "es_MX")
