@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E66CF5802BE153B100550749"
-               BuildableName = "AR_prueba.app"
-               BlueprintName = "AR_prueba"
-               ReferencedContainer = "container:AR_prueba.xcodeproj">
+               BuildableName = "cashAR.app"
+               BlueprintName = "cashAR"
+               ReferencedContainer = "container:cashAR.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E66CF5802BE153B100550749"
-            BuildableName = "AR_prueba.app"
-            BlueprintName = "AR_prueba"
-            ReferencedContainer = "container:AR_prueba.xcodeproj">
+            BuildableName = "cashAR.app"
+            BlueprintName = "cashAR"
+            ReferencedContainer = "container:cashAR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E66CF5802BE153B100550749"
-            BuildableName = "AR_prueba.app"
-            BlueprintName = "AR_prueba"
-            ReferencedContainer = "container:AR_prueba.xcodeproj">
+            BuildableName = "cashAR.app"
+            BlueprintName = "cashAR"
+            ReferencedContainer = "container:cashAR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

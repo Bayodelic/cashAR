@@ -21,7 +21,7 @@
 		E634F9682BF5730800F382A7 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		E634F96A2BF573C500F382A7 /* ExchangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeController.swift; sourceTree = "<group>"; };
 		E65877182BF5AB740085F25C /* CurrencyClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CurrencyClassification.mlmodel; sourceTree = "<group>"; };
-		E66CF5812BE153B100550749 /* AR_prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66CF5812BE153B100550749 /* cashAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cashAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66CF5842BE153B100550749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E66CF58B2BE153B100550749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E66CF58D2BE153B300550749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		E66CF5782BE153B100550749 = {
 			isa = PBXGroup;
 			children = (
-				E66CF5832BE153B100550749 /* AR_prueba */,
+				E66CF5832BE153B100550749 /* cashAR */,
 				E66CF5822BE153B100550749 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,12 @@
 		E66CF5822BE153B100550749 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E66CF5812BE153B100550749 /* AR_prueba.app */,
+				E66CF5812BE153B100550749 /* cashAR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E66CF5832BE153B100550749 /* AR_prueba */ = {
+		E66CF5832BE153B100550749 /* cashAR */ = {
 			isa = PBXGroup;
 			children = (
 				E66CF5842BE153B100550749 /* AppDelegate.swift */,
@@ -68,15 +68,15 @@
 				E66CF58F2BE153B300550749 /* LaunchScreen.storyboard */,
 				E65877182BF5AB740085F25C /* CurrencyClassification.mlmodel */,
 			);
-			path = AR_prueba;
+			path = cashAR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E66CF5802BE153B100550749 /* AR_prueba */ = {
+		E66CF5802BE153B100550749 /* cashAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E66CF5942BE153B300550749 /* Build configuration list for PBXNativeTarget "AR_prueba" */;
+			buildConfigurationList = E66CF5942BE153B300550749 /* Build configuration list for PBXNativeTarget "cashAR" */;
 			buildPhases = (
 				E66CF57D2BE153B100550749 /* Sources */,
 				E66CF57E2BE153B100550749 /* Frameworks */,
@@ -86,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = AR_prueba;
+			name = cashAR;
 			productName = AR_prueba;
-			productReference = E66CF5812BE153B100550749 /* AR_prueba.app */;
+			productReference = E66CF5812BE153B100550749 /* cashAR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E66CF57C2BE153B100550749 /* Build configuration list for PBXProject "AR_prueba" */;
+			buildConfigurationList = E66CF57C2BE153B100550749 /* Build configuration list for PBXProject "cashAR" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E66CF5802BE153B100550749 /* AR_prueba */,
+				E66CF5802BE153B100550749 /* cashAR */,
 			);
 		};
 /* End PBXProject section */
@@ -360,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E66CF57C2BE153B100550749 /* Build configuration list for PBXProject "AR_prueba" */ = {
+		E66CF57C2BE153B100550749 /* Build configuration list for PBXProject "cashAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E66CF5922BE153B300550749 /* Debug */,
@@ -369,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E66CF5942BE153B300550749 /* Build configuration list for PBXNativeTarget "AR_prueba" */ = {
+		E66CF5942BE153B300550749 /* Build configuration list for PBXNativeTarget "cashAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E66CF5952BE153B300550749 /* Debug */,
